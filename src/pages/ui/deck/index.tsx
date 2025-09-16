@@ -21,16 +21,17 @@ import ShuffleIcon from '@mui/icons-material/Shuffle';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import {PART1, PART2, PART3} from "../../helpers/constants.ts";
+import {PART1, PART2, PART3, PART4} from "../../helpers/constants.ts";
 
 
 
-type CategoryKey = 'part1' | 'part2' | 'part3';
+type CategoryKey = 'part1' | 'part2' | 'part3' | 'part4';
 
 const ALL: Record<CategoryKey, string[]> = {
     part1: PART1,
     part2: PART2,
     part3: PART3,
+    part4: PART4,
 };
 
 export default function DimashkaQaraqatApp() {
@@ -40,6 +41,7 @@ export default function DimashkaQaraqatApp() {
         part1: [...ALL.part1],
         part2: [...ALL.part2],
         part3: [...ALL.part3],
+        part4: [...ALL.part4],
     });
 
     const [history, setHistory] = useState<string[]>([]);
@@ -98,6 +100,8 @@ export default function DimashkaQaraqatApp() {
                 return '2 level';
             case 'part3':
                 return 'Boss level';
+            case 'part4':
+                return 'increadable level';
         }
     }, [category]);
 
@@ -125,9 +129,10 @@ export default function DimashkaQaraqatApp() {
                                 label="Emotion level :)"
                                 onChange={handleCategoryChange}
                             >
-                                <MenuItem value="part1">Этап: small talk</MenuItem>
-                                <MenuItem value="part2">Доверие.exe загружается</MenuItem>
-                                <MenuItem value="part3">ааххх как Неловкооооо</MenuItem>
+                                <MenuItem value="part1">Разогрев ⛅ (Small Talk Mode)</MenuItem>
+                                <MenuItem value="part2">Доверие.exe 🛠 (установка близости)</MenuItem>
+                                <MenuItem value="part3">Оу... так неловкооо 💔 (но это сближает)</MenuItem>
+                                <MenuItem value="part4">Философский космос 🌌 (глубокие мысли)</MenuItem>
                             </Select>
                         </FormControl>
 
