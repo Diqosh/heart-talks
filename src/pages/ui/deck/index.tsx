@@ -129,10 +129,10 @@ export default function DimashkaQaraqatApp() {
                                 label="Emotion level :)"
                                 onChange={handleCategoryChange}
                             >
-                                <MenuItem value="part1">Разогрев ⛅ (Small Talk Mode)</MenuItem>
-                                <MenuItem value="part2">Доверие.exe 🛠 (установка близости)</MenuItem>
-                                <MenuItem value="part3">Оу... так неловкооо 💔 (но это сближает)</MenuItem>
-                                <MenuItem value="part4">Философский космос 🌌 (глубокие мысли)</MenuItem>
+                                <MenuItem value="part1">Icebreaker ❄️</MenuItem>
+                                <MenuItem value="part2">Сняли маски 🎭</MenuItem>
+                                <MenuItem value="part3">Сердце на распашку 💌</MenuItem>
+                                <MenuItem value="part4">Философский космос 🌌 deep mind</MenuItem>
                             </Select>
                         </FormControl>
 
